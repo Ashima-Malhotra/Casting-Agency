@@ -1,8 +1,8 @@
 from flask import Flask, request, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from database.models import db_drop_and_create_all, setup_db, Actors, Movies
-from controllers.auth import AuthError, requires_auth
+from .database.models import db_drop_and_create_all, setup_db, Actors, Movies
+from .controllers.auth import AuthError, requires_auth
 
 
 def create_app(test_config=None):
@@ -12,7 +12,7 @@ def create_app(test_config=None):
     # Uncomment the following line on the initial run to setup
     # the required tables in the database
 
-    db_drop_and_create_all()
+    # db_drop_and_create_all()
 
     CORS(app, resources={r"*": {"origins": "*"}})
 
