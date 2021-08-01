@@ -51,7 +51,7 @@ Before running the application locally, make the following changes in the `app.p
 To run the server, execute:
 
 ```bash
-export DATABASE_https:/fsnd-casting-agency-app.herokuapp.com/=<database-connection-https:/fsnd-casting-agency-app.herokuapp.com/>
+export DATABASE_URL=https:/fsnd-casting-agency-app.herokuapp.com/=<database-connection-https:/fsnd-casting-agency-app.herokuapp.com/>
 
 Each time you open a new terminal session, run:
 
