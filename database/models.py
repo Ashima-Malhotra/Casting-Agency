@@ -1,7 +1,6 @@
 from sqlalchemy import Column, String, Integer, ForeignKey, Float, Date
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
-from flask_moment import Moment
 from flask_migrate import Migrate, MigrateCommand
 import os
 
