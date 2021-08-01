@@ -1,11 +1,15 @@
 from sqlalchemy import Column, String, Integer, ForeignKey, Float, Date
 from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
+from flask_moment import Moment
+from flask_migrate import Migrate, MigrateCommand
 import os
 
 
 database_path = os.environ['DATABASE_URL']
 # database_path = 'postgresql://postgres:user@localhost:5432/casting_agency'
 db = SQLAlchemy()
+
 '''
 setup_db(app)
     binds a flask application and a SQLAlchemy service
