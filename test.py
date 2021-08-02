@@ -42,16 +42,16 @@ class CastingAgencyTestCase(unittest.TestCase):
             "title": "Knives Out8",
             "release_year": 2019,
             "movie_rating": 4.7,
-            "cast":["Tom Crewse","Matthew McConaughey","Anam de Armas"]
+            "cast": ["Tom Crewse", "Matthew McConaughey", "Anam de Armas"]
         }
 
         self.INVALID_NEW_MOVIE = {
             'title': "Greyhound",
             'movie_rating': 4.6,
             'cast': [
-                    "Brad Pitt", "Tom Hary"
-                ]
-            },
+                "Brad Pitt", "Tom Hary"
+            ]
+        },
 
         self.VALID_UPDATE_MOVIE = {
             'movie_rating': 4.6,

@@ -46,7 +46,6 @@ Before running the application locally, make the following changes in the `app.p
     from .database.models import db_drop_and_create_all, setup_db, Actors, Movies
     from .controllers.auth import AuthError, requires_auth
   ```
-- Also, uncomment the line `db_drop_and_create_all()` on the initial run to setup the required tables in the database.
 
 To run the server, execute:
 

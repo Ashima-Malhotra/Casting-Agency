@@ -9,11 +9,6 @@ def create_app(test_config=None):
     app = Flask(__name__)
     setup_db(app)
 
-    # Uncomment the following line on the initial run to setup
-    # the required tables in the database
-
-    # db_drop_and_create_all()
-
     CORS(app, resources={r"*": {"origins": "*"}})
 
     @app.after_request
@@ -46,7 +41,7 @@ def create_app(test_config=None):
             map(Actors.long, Actors.query.filter(Actors.id == actor_id)))
         if not actor:
             abort(404)
-        else :       
+        else:
             return jsonify({
                 "success": True,
                 "actor": actor
@@ -163,7 +158,7 @@ def create_app(test_config=None):
             map(Movies.long, Movies.query.filter(Movies.id == movie_id)))
         if not movie:
             abort(404)
-        else:        
+        else:
             return jsonify({
                 "success": True,
                 "movie": movie
