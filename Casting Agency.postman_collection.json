@@ -1,0 +1,1339 @@
+{
+	"info": {
+		"_postman_id": "134ede81-92f5-41e4-8554-ba39c3be31c1",
+		"name": "Casting Agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "Actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actor-details//11",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actor-details",
+								"",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Keira Knightley\",\n    \"gender\":\"Male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Keira Christina Knightley\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors//11",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors",
+								"",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors//11",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors",
+								"",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movie-details//1",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movie-details",
+								"",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Edge of Tomorrow\",\n\t\"release_year\": 2014,\n\t\"movie_rating\": 7.9,\n\t\"cast\": [\"Tom Cruise\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie_rating\": 8.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies//7",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies",
+								"",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies//7",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies",
+								"",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IktlVE5MeDdSQmNFX2YzdWcxeTNpciJ9.eyJpc3MiOiJodHRwczovL2ZzbmRwcm9qZWN0LmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MGZlZWUyMzEzZTVlNjAwNjg1N2VjODYiLCJhdWQiOiJjYXN0aW5nLWFnZW5jeS1hcGkiLCJpYXQiOjE2Mjc5MjMxODUsImV4cCI6MTYyNzkzMDM4NSwiYXpwIjoiUDY5djlvR3h1TEF4eXh0NVh0bmk3T2kwZlpVWFJJaEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDphY3Rvci1kZXRhaWxzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZS1kZXRhaWxzIiwiZ2V0Om1vdmllcyJdfQ.wFLPdNsdLcbupLasODG7Zbcj4E0VI-sFffvVWTDEOBjCExreDQgywiPuOJQCzS4UC44Nl1qcjp8QH11MtVHcC6e1A1vsiDDMhIF4M5w-GmucK1DcBcTa2f9IigxFgB8cYcYTax2Gm-v8q4k8rgitYMpYtbp49FT_4sXvSHHFf3eF8iGBZyAwkdwFdv_XXMWpSL7VCrCCTZIq4ditaDmqiE19mG7bFa2d9q67XRq0y4HwVkOsUf2UBT2XOGGY4rNrGdSi4ua_iezWANphqW7VebpKtVeTR6MEykFFppV0y4rnQ8eX2Z2A5Zpp74K4y_lOfIEuHDfvyT9C04x6OQ7K7A",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "Actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actor-details//11",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actor-details",
+								"",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Tom Hanks\",\n    \"age\" : 40,\n    \"gender\":\"Male\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Keira Christina Knightley\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors//11",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors",
+								"",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors//12",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors",
+								"",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movie-details//1",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movie-details",
+								"",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Edge of Tomorrow\",\n\t\"release_year\": 2014,\n\t\"movie_rating\": 7.9,\n\t\"cast\": [\"Tom Hanks\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie_rating\": 8.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies//6",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies",
+								"",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com///movies//6",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"",
+								"movies",
+								"",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IktlVE5MeDdSQmNFX2YzdWcxeTNpciJ9.eyJpc3MiOiJodHRwczovL2ZzbmRwcm9qZWN0LmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExMDIzNzE2OTIwMzczMTE0MzU0MCIsImF1ZCI6ImNhc3RpbmctYWdlbmN5LWFwaSIsImlhdCI6MTYyNzkyMzEyNiwiZXhwIjoxNjI3OTMwMzI2LCJhenAiOiJQNjl2OW9HeHVMQXh5eHQ1WHRuaTdPaTBmWlVYUkloRCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9yLWRldGFpbHMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllLWRldGFpbHMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3IiLCJwYXRjaDptb3ZpZSIsInBvc3Q6YWN0b3IiLCJwb3N0Om1vdmllIl19.tRb_RyxjlbZRpxtV4z1K13DvAMOkJ2tk5MmAoSJvai4F5B6mPB45lcZEhDph_GgGRfvJ5oXELNHcwQECJXfIlate-Cx4j5Fgz-HXDHQQnBtgUiLMQbUB6KwPC4NIhdBrJqiJ8f6VyiNn18XkTvWXYg_JiQ_xayIVJUAf6aPBA4G9MZcHn1ovqwrSkHXhCrvJgo6si2xbbnErevPMPDH4MDQ1cw2jZTW4cn-rYdSjyATiz-k_EPu0XgjP5-aBJl5oqSKxJyduCdkPTbv2-Fv-_Z1IjI2sn38LBdattG5IJSB3KaHqiN5hD9tuCR6OPWn6xCSddLxbM8B07cTWcS1SJw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "Actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com///actors",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com///actor-details//11",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"",
+								"actor-details",
+								"",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Keira Knightley\",\n    \"age\" : 50,\n    \"gender\":\"Female\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Keira Christina Knightley\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com///actors//20",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"",
+								"actors",
+								"",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//actors//20",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"actors",
+								"",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movie-details//1",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movie-details",
+								"",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Edges of Tomorrow\",\n\t\"release_year\": 2014,\n\t\"movie_rating\": 7.9,\n\t\"cast\": [\"Keira Knightley\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"movie_rating\": 8.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies//8",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies",
+								"",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fsnd-casting-agency-app.herokuapp.com//movies//8",
+							"protocol": "https",
+							"host": [
+								"fsnd-casting-agency-app",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"movies",
+								"",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IktlVE5MeDdSQmNFX2YzdWcxeTNpciJ9.eyJpc3MiOiJodHRwczovL2ZzbmRwcm9qZWN0LmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2MGJmOTAwODZlYjhmNjAwNjg4ZjhiNmMiLCJhdWQiOiJjYXN0aW5nLWFnZW5jeS1hcGkiLCJpYXQiOjE2Mjc5MjMwNDgsImV4cCI6MTYyNzkzMDI0OCwiYXpwIjoiUDY5djlvR3h1TEF4eXh0NVh0bmk3T2kwZlpVWFJJaEQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvciIsImRlbGV0ZTptb3ZpZSIsImdldDphY3Rvci1kZXRhaWxzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZS1kZXRhaWxzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9yIiwicGF0Y2g6bW92aWUiLCJwb3N0OmFjdG9yIiwicG9zdDptb3ZpZSJdfQ.IoQt-0kdSLGapuF9Ntt5Ntgs1qgtYAcLTn630Ubw1CQJZawtrGKFQsYc3hdNeMCx0Za7YJQl30y4be2W46Ozs0QqZny29BXylM-a5iGVTKnmBCL0m-ScNWySlqy6gZreTqTj9GO22QfsaGIJz7wEB5KfsvnV8IvbMfiajSdIJKJGZalI68ty5xu4I4wJ6Dc_qmCOrYCZJpZv0VMRs-F1xGe1PJJHShfgInQZrbrnuau-8JF9JA6EGkXq43bJTbsEpCwQCTMwxBjLRoOPWSs_ACrrfgzJqYzHrNziGkWoeuPoRxyJ29zRz-NeuIh_SlaBsaATw7J0Hu_u9F9cXdgrfg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fsnd-casting-agency-app.herokuapp.com//",
+					"protocol": "https",
+					"host": [
+						"fsnd-casting-agency-app",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
